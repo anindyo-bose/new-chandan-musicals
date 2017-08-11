@@ -7,7 +7,24 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
+<style>
+.hei{
+  text-align: center;
+}
+#map {
+       height: 400px;
+     }
+     td{
+       margin: 2px;
+       padding: 2px;
+     }
+     .bname{
+       font-family: 'Lobster', cursive;
+       text-align: center;
+     }
+</style>
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -26,16 +43,87 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#cont">Contact</a></li>
 
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container">
+<h1 class="bname">New Chandan Musicals</h1>
+<div class="container-fluid">
 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="home\Cor1.JPG"  style="width:100%; height:500px;"  class=" img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="home\Cor2.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="home\Cor3.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="home\Cor4.JPG"  style="width:100%; height:500px;" class=" img-responsive">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
+<div class="container-fluid hei" id="cont">
+  <h2><b>How to Reach us</b></h2>
+  <h3><b>Our Address</b></h3>
+  <h4>H.B Road, Tharpakhna,</h4>
+  <h4>Near Axis Bank,</h4>
+  <h4>Ranchi, Jharkhand 834001</h4>
+  <br>
+  <h3><b>Our Contact</b> </h3>
+  <center>
+  <table>
+    <tr>
+      <td><h4>Mr. Chandan Bose </td> <td><a href'#'> +91-93047-23025</a></h4></td></tr><tr>
+      <td><h4>Mr. Arnab Bose</td> <td><a href'#'> +91-81032-89944</a></h4></td>
+    </tr>
+  </table>
+</center>
+  <br>
+  <h3><b>Our Location</b></h3>
 
+  <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 23.370662, lng: 85.327160},
+          zoom: 20
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYv_XzJZszJpsBTFOwM_o9QJ239wMCj10&callback=initMap"
+    async defer></script>
+</div>
+<div></div>
 </body>
 </html>
